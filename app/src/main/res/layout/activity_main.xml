@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity"
+    android:background="@color/fondo">
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="353dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="98dp"
+        android:layout_marginTop="77dp"
+        android:layout_marginEnd="102dp"
+        android:gravity="center"
+        android:text="Digite el número que aparece en la pulsera"
+        android:textColor="@color/naranja"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextHemoglobina"
+        android:layout_width="285dp"
+        android:layout_height="47dp"
+        android:layout_below="@+id/tvTitulo"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="163dp"
+        android:layout_marginEnd="95dp"
+        android:background="@drawable/edittext_border"
+        android:gravity="center"
+        android:hint="Digite el número"
+        android:inputType="numberDecimal"
+        android:textColorHint="#68000000" />
+
+    <Button
+        android:id="@+id/btnConsultar"
+        android:layout_width="228dp"
+        android:layout_height="63dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="113dp"
+        android:layout_marginEnd="118dp"
+        android:layout_marginBottom="160dp"
+
+        android:background="@drawable/boton"
+        android:text="Consultar"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <include
+        layout="@layout/activity_menu_inferior"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

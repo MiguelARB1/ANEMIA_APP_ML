@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".OpcionesActivity"
+    android:background="@color/fondo">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:text="Eliga una opcion"
+        android:textColor="@color/naranja"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnEscanearQR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:onClick="LLAMAR_QR"
+        android:text="Escanear QR"
+        android:background="@drawable/boton"
+        android:textColor="@color/white"/>
+
+    <Button
+        android:id="@+id/btnIngresarNivelHemoglobina"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnEscanearQR"
+        android:layout_marginTop="300dp"
+        android:onClick="LLAMAR_NIVEL_HEMOGLOBINA"
+        android:text="Ingresar Nivel de Hemoglobina Manualmente"
+        android:background="@drawable/boton"
+        android:textColor="@color/white"/>
+    <include
+        layout="@layout/activity_menu_inferior"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

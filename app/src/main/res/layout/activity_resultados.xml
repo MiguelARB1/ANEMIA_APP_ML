@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".ResultadosActivity"
+    android:background="@color/fondo">
+
+  <TextView
+      android:id="@+id/TITULO1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="16dp"
+      android:text="RESULTADOS"
+      android:textColor="@color/naranja"
+      android:textStyle="bold"
+      android:textSize="30dp" />
+
+  <TextView
+      android:id="@+id/tvResultado"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/TITULO1"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="16dp"
+      android:textColor="@color/white"
+      android:textSize="20dp" />
+
+  <TextView
+      android:id="@+id/TITULO2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/tvResultado"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="16dp"
+      android:text="RECOMENDACIONES"
+      android:textColor="@color/naranja"
+      android:textStyle="bold"
+      android:textSize="30dp" />
+
+  <TextView
+      android:id="@+id/tvRecomendaciones"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/TITULO2"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="16dp"
+      android:layout_marginStart="16dp"
+      android:layout_marginEnd="16dp"
+      android:justificationMode="inter_word"
+      android:textColor="@color/white"
+      android:textSize="20dp" />
+
+  <ImageView
+      android:id="@+id/imgResultado"
+      android:layout_width="150dp"
+      android:layout_height="150dp"
+      android:layout_below="@id/tvRecomendaciones"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="16dp"
+      android:layout_marginBottom="16dp"
+      android:src="@drawable/qr_menu" />
+  <include
+      layout="@layout/activity_menu_inferior"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true" />
+</RelativeLayout>
