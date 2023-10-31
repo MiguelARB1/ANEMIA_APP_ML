@@ -1,70 +1,112 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
-    tools:context=".TomarFoto"
-    android:background="@color/fondo">
+    android:background="@color/fondo"
+    tools:context=".TomarFoto">
 
+    <!-- TextView para el título -->
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="DETECCIÓN A TRAVES DE FOTOS"
+        android:textStyle="bold"
+        android:textColor="@color/naranja"
+        android:textSize="24sp" />
+
+    <!-- ImageView debajo del título -->
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="389dp"
-        android:layout_height="298dp"
-        android:layout_weight="1"
-        android:scaleType="matrix" />
+        android:layout_width="380dp"
+        android:layout_height="450dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/esperando"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/titleTextView" />
 
-    <Button
-        android:id="@+id/selectImageBtn"
-        android:layout_width="wrap_content"
+    <!-- Botones centrados -->
+    <LinearLayout
+        android:id="@+id/buttonsLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Seleccionar Imagen"
-        android:background="@drawable/boton"
-        android:textColor="@color/white"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp" />
+        android:gravity="center"
+        android:layout_below="@+id/imageView">
 
-    <Button
-        android:id="@+id/takePhotoBtn"
-        android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/seleccionarImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seleccionar foto" />
+
+        <Button
+            android:id="@+id/buttonMakePrediction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Hacer Predicción"
+            android:background="@drawable/boton" />
+    </LinearLayout>
+
+    <!-- Recomendaciones -->
+    <LinearLayout
+        android:id="@+id/recomendacionesLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="tomar foto"
-        android:background="@drawable/boton"
-        android:textColor="@color/white"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp" />
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/buttonsLayout">
 
-    <Button
-        android:id="@+id/drawPolygonBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Recortar"
-        android:background="@drawable/boton"
-        android:textColor="@color/white"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textStyle="italic"
+            android:text="RECOMENDACIONES" />
 
-    <Button
-        android:id="@+id/saveImageBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hacer Prediccion"
-        android:background="@drawable/boton"
-        android:textColor="@color/white"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textStyle="italic"
+            android:text="- La imagen debe estar recortada solo la parte de las conjuntivas" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textStyle="italic"
+            android:text="- La imagen debe estar en formato PNG" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textStyle="italic"
+            android:text="- La imagen debe ser estar nitida y la foto debio ser tomaba con buena iluminacion" />
+    </LinearLayout>
+
+    <!-- Texto adicional -->
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:text=""></TextView>
+        android:textColor="@color/naranja"
+        android:textStyle="italic"
+        android:text=""
+        android:textSize="20dp"
+        android:layout_below="@+id/recomendacionesLayout" />
 
+    <!-- Menú inferior (si lo tienes) -->
     <include
+        android:id="@+id/menuInferior"
         layout="@layout/activity_menu_inferior"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true" />
-</LinearLayout>
+</RelativeLayout>
